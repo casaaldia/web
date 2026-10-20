@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad de Casa al día</title>
+<meta name="description" content="Casa al día: qué revisar y limpiar en casa, y cuándo. Avisos adaptados a España.">
+<link rel="icon" href="img/icono-192.png">
+<style>
+@font-face{font-family:Inter;src:url(fuentes/inter.ttf) format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:Fraunces;src:url(fuentes/fraunces_cursiva.ttf) format("truetype");font-style:italic;font-weight:400;font-display:swap}
+/* Nombre: «Casa» recta y «al día» en cursiva mostaza (20/10/2026) */
+.nombre i{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:400;font-size:1.1em;color:#A87B2A}
+header .nombre i{color:#E3B341}
+@media (prefers-color-scheme:dark){.nombre i{color:#E3B341}}
+:root{--petroleo:#1F4A55;--petroleo-claro:#E8EFF0;--crema:#F7F1E6;--mostaza:#E3B341;
+--texto:#1E2427;--suave:#5B6569;--linea:#DCE3E4;--fondo:#FBFAF7;--tarjeta:#FFFFFF}
+@media (prefers-color-scheme:dark){:root{--petroleo:#8FC1CC;--petroleo-claro:#1C2E33;
+--texto:#E6EAEB;--suave:#A3AFB2;--linea:#2C3A3E;--fondo:#121819;--tarjeta:#192124}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--texto);
+font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--petroleo)}
+header{background:#1F4A55;color:#F7F1E6}
+.barra{max-width:760px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;
+gap:12px;flex-wrap:wrap}
+.marca{display:flex;align-items:center;gap:10px;color:#F7F1E6;text-decoration:none;
+font-weight:600;font-size:19px;margin-right:auto}
+.marca img{width:36px;height:36px;border-radius:9px}
+nav a{color:#F7F1E6;text-decoration:none;font-size:15px;padding:4px 8px;border-radius:6px;opacity:.85}
+nav a:hover,nav a.activa{opacity:1;background:rgba(247,241,230,.14)}
+main{max-width:760px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:28px;line-height:1.25;margin:0 0 6px}
+h2{font-size:20px;margin:32px 0 8px;color:var(--petroleo)}
+.version{color:var(--suave);font-size:14px;margin:0 0 20px}
+table{width:100%;border-collapse:collapse;background:var(--tarjeta);border:1px solid var(--linea);
+border-radius:10px;overflow:hidden;font-size:15px}
+td{padding:10px 12px;border-top:1px solid var(--linea);vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{width:34%;color:var(--petroleo)}
+@media (max-width:520px){td{display:block;width:auto!important}
+td:first-child{padding-bottom:0;border-top:1px solid var(--linea)}td+td{border-top:0}}
+ul{padding-left:22px}
+footer{border-top:1px solid var(--linea);color:var(--suave);font-size:14px}
+footer div{max-width:760px;margin:0 auto;padding:18px 16px}
+.aviso{display:inline-block;background:var(--petroleo-claro);color:var(--petroleo);
+padding:8px 14px;border-radius:999px;font-size:15px}
+/* Portada */
+main.ancho{max-width:1040px;padding-top:0}
+.heroe{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:48px 0 40px}
+.heroe h1{font-size:44px;line-height:1.1;letter-spacing:-.02em;margin:10px 0 16px}
+.heroe .entrada{font-size:19px;color:var(--suave);margin:0 0 24px}
+.etiqueta{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+color:var(--petroleo);background:var(--petroleo-claro);padding:5px 12px;border-radius:999px}
+.botones{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.boton{display:inline-block;background:#1F4A55;color:#F7F1E6;text-decoration:none;font-weight:600;
+padding:12px 20px;border-radius:14px}
+.sello{font-size:15px;color:var(--suave)}
+.movil{width:270px;margin:0 auto;border:10px solid #1E2427;border-radius:40px;overflow:hidden;
+background:#1E2427;box-shadow:0 24px 60px rgba(31,74,85,.22)}
+.movil img{display:block;width:100%;height:auto}
+.seccion{padding:44px 0;border-top:1px solid var(--linea)}
+.seccion>h2{font-size:30px;line-height:1.2;letter-spacing:-.01em;color:var(--texto);margin:0 0 8px}
+.seccion>p.sub{color:var(--suave);margin:0 0 28px;max-width:640px}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:paso}
+.paso{background:var(--tarjeta);border:1px solid var(--linea);border-radius:18px;padding:22px}
+.paso b{display:block;font-size:18px;margin-bottom:4px}
+.paso:before{counter-increment:paso;content:counter(paso);display:inline-flex;width:34px;height:34px;
+border-radius:50%;background:#1F4A55;color:#F7F1E6;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+.paso p,.func p{margin:0;color:var(--suave);font-size:16px}
+.funciones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.func{background:var(--tarjeta);border:1px solid var(--linea);border-radius:18px;padding:22px}
+.func b{display:block;font-size:17px;margin:12px 0 4px}
+.icono{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.icono svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.galeria{display:flex;gap:22px;overflow-x:auto;padding:6px 4px 18px;scroll-snap-type:x mandatory}
+.galeria figure{margin:0;flex:0 0 220px;scroll-snap-align:start;text-align:center}
+.galeria .movil{width:220px;border-width:8px;border-radius:32px;box-shadow:0 12px 30px rgba(31,74,85,.16)}
+.galeria figcaption{font-size:15px;color:var(--suave);margin-top:10px}
+.privada{background:#1F4A55;color:#F7F1E6;border-radius:24px;padding:36px;display:grid;
+grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 20px}
+.privada h2{color:#F7F1E6;font-size:28px;margin:0 0 8px}
+.privada p{margin:0;opacity:.85}
+.privada ul{list-style:none;padding:0;margin:0}
+.privada li{padding:8px 0 8px 30px;position:relative;border-top:1px solid rgba(247,241,230,.18)}
+.privada li:first-child{border-top:0}
+.privada li:before{content:"✓";position:absolute;left:0;color:#E3B341;font-weight:700}
+.nota{font-size:14px;color:var(--suave);max-width:720px}
+.final{text-align:center;padding:48px 0 16px;border-top:1px solid var(--linea)}
+.final img{width:84px;height:84px;border-radius:20px}
+.final h2{font-size:28px;margin:12px 0 6px;color:var(--texto)}
+@media (max-width:820px){.heroe{grid-template-columns:1fr;padding-top:28px;text-align:center}
+.heroe h1{font-size:34px}.botones{justify-content:center}.pasos,.funciones{grid-template-columns:1fr}
+.privada{grid-template-columns:1fr;padding:26px}.seccion>h2{font-size:26px}}
+.pendiente{background:#FBEFC9;color:#6B5310;padding:0 4px;border-radius:4px}
+</style>
+</head>
+<body>
+<header><div class="barra">
+<a class="marca" href="index.html"><img src="img/icono-192.png" alt=""><span class="nombre">Casa <i>al día</i></span></a>
+<nav><a href="privacidad.html" class=activa>Privacidad</a><a href="terminos.html">Términos</a><a href="quien-soy.html">Quién soy</a></nav>
+</div></header>
+<main>
+<h1>Política de privacidad de Casa al día</h1>
+<p class="version">Versión 1.0 · Última actualización: 20 de octubre de 2026</p>
+<h2>Resumen</h2>
+<table><tr><td><strong>Responsable</strong></td><td>Sergio Díaz González · <a href="mailto:contacto@casaaldiaapp.es">contacto@casaaldiaapp.es</a></td></tr><tr><td><strong>Qué datos tratamos</strong></td><td>Ninguno de los que guardas en la app: tus casas, tareas, contactos, contratos, aparatos, fotos y documentos se quedan solo en tu móvil. Solo tratamos los correos que tú nos envíes.</td></tr><tr><td><strong>Para qué</strong></td><td>Para contestar tus consultas.</td></tr><tr><td><strong>Legitimación</strong></td><td>Tu consentimiento al escribirnos.</td></tr><tr><td><strong>Destinatarios</strong></td><td>Nadie. No vendemos ni cedemos datos.</td></tr><tr><td><strong>Derechos</strong></td><td>Acceso, rectificación, supresión, oposición, limitación y portabilidad, escribiendo a <a href="mailto:contacto@casaaldiaapp.es">contacto@casaaldiaapp.es</a>. Puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://aepd.es">aepd.es</a>).</td></tr></table>
+<p>Casa al día no tiene cuentas ni inicio de sesión, no muestra anuncios y no usa herramientas de analítica, de seguimiento ni de informes de errores.</p>
+<h2>1. Quién es el responsable</h2>
+<p>Sergio Díaz González. Correo: <a href="mailto:contacto@casaaldiaapp.es">contacto@casaaldiaapp.es</a>.</p>
+<h2>2. Lo que guardas en la app se queda en tu móvil</h2>
+<p>En la app guardas tus casas, las respuestas del cuestionario (por ejemplo, tu comunidad autónoma o si tienes caldera), las tareas y su historial, tus ajustes, los contactos de profesionales (nombre y teléfono), los contratos de suministros (también los anteriores), los aparatos con su fecha de compra y su garantía, la foto de cada casa y las fotos y documentos PDF que adjuntes (por ejemplo, contratos, facturas o tickets de compra).</p>
+<p>Todo eso se guarda solo en la memoria de tu móvil. La app no lo envía a ningún servidor y nosotros no podemos verlo ni recuperarlo.</p>
+<p>Para borrarlo todo: desinstala la app o borra sus datos en los ajustes de Android. También puedes borrar cada casa, tarea, contacto o documento desde la propia app.</p>
+<h2>3. Copias de seguridad e informes</h2>
+<p>En Ajustes › Copia de seguridad puedes crear un archivo .zip con todos tus datos, incluidas las fotos, los documentos y los contactos. Tú eliges dónde guardarlo (por ejemplo, en tu Google Drive o en el ordenador). Ese archivo no pasa por nosotros. Guárdalo en un sitio seguro, porque contiene datos personales tuyos y de otras personas (tus contactos).</p>
+<p>Si activas la copia automática, la app hace esa copia sola, cada semana o cada mes y a la hora que elijas, en el archivo que tú elegiste, y sustituye a la anterior. Tampoco pasa por nosotros. Si ese archivo está en tu Google Drive, lo guarda Google según su propia política de privacidad.</p>
+<p>Lo mismo ocurre con el informe en PDF o Excel: se crea en tu móvil y tú decides dónde guardarlo o con quién compartirlo.</p>
+<h2>4. Avisos y widget</h2>
+<p>Los avisos se calculan en tu móvil. No se envía nada a ningún servidor para avisarte. Ten en cuenta que los avisos y el widget de la pantalla de inicio muestran el nombre de tus tareas, así que quien vea tu móvil puede leerlos. Puedes ocultar el contenido de las notificaciones en la pantalla de bloqueo desde los ajustes de Android.</p>
+<h2>5. Permisos que usa la app</h2>
+<ul><li><strong>Notificaciones:</strong> para avisarte de las tareas. Puedes quitarlo cuando quieras en los ajustes de Android; la app seguirá funcionando, pero sin avisos.</li><li><strong>Fotos y documentos:</strong> la app no pide permiso para ver tus fotos o archivos. Cuando adjuntas algo, Android te abre su propio selector y la app solo recibe lo que tú eliges. Para hacer una foto, la app abre la cámara del móvil y guarda solo esa foto.</li><li><strong>Internet:</strong> la app no tiene permiso de internet, así que no puede enviar tus datos a ningún sitio.</li></ul>
+<h2>6. Sin compras</h2>
+<p>La app es gratuita: no hay compras ni suscripciones, y no recogemos ningún dato de pago.</p>
+<h2>7. Si nos escribes</h2>
+<p>Si nos envías un correo, guardamos tu dirección y lo que nos cuentes solo para contestarte, y lo borramos como mucho un año después de cerrar la consulta, salvo que una ley nos obligue a guardarlo más tiempo. El correo lo gestiona Zoho Mail, con servidores en la Unión Europea.</p>
+<h2>8. Google Play</h2>
+<p>Descargas la app desde Google Play, que trata tus datos según su propia política de privacidad (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>). Nosotros no recibimos datos tuyos por ello, salvo estadísticas generales y anónimas que Google Play muestra a todos los desarrolladores (por ejemplo, número de instalaciones).</p>
+<p>La ventana para valorar la app desde dentro de ella también es de Google Play: tu valoración va directamente a Google, y nosotros solo vemos la reseña pública.</p>
+<h2>9. Edad</h2>
+<p>La app está pensada para adultos.</p>
+<h2>10. Tus derechos</h2>
+<p>Sobre los datos que tenemos nosotros (los correos), puedes pedir acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a <a href="mailto:contacto@casaaldiaapp.es">contacto@casaaldiaapp.es</a>. Te contestaremos en un mes como máximo. Si no estás de acuerdo con la respuesta, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
+<p>Los datos que guardas en la app los controlas tú directamente: puedes verlos, cambiarlos, exportarlos y borrarlos en cualquier momento.</p>
+<h2>11. Cambios en esta política</h2>
+<p>Si cambiamos algo importante, te avisaremos dentro de la app antes de que se aplique. Esta página indica siempre la fecha de la última actualización, y las versiones anteriores se pueden consultar en https://github.com/casaaldia/web/commits/main.</p>
+</main>
+<footer><div>Casa al día · Sin anuncios · Tus datos se quedan en tu móvil · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a href="quien-soy.html">Quién soy</a></div></footer>
+</body>
+</html>
