@@ -86,6 +86,17 @@ grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 20px}
 .privada li:first-child{border-top:0}
 .privada li:before{content:"✓";position:absolute;left:0;color:#E3B341;font-weight:700}
 .nota{font-size:14px;color:var(--suave);max-width:720px}
+.video{display:block;position:relative;max-width:760px;margin:0 auto;border-radius:22px;overflow:hidden;
+box-shadow:0 24px 60px rgba(31,74,85,.22)}
+.video img{display:block;width:100%;height:auto}
+.video .play{position:absolute;left:7%;bottom:9%;display:flex;align-items:center;gap:12px;
+color:#F7F1E6;font-weight:600;font-size:16px;text-decoration:none}
+.video .play span{width:56px;height:56px;border-radius:50%;background:#F7F1E6;display:flex;
+align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .15s}
+.video:hover .play span{transform:scale(1.08)}
+.video .play svg{width:24px;height:24px;fill:#1F4A55;margin-left:4px}
+@media (max-width:520px){.video .play{font-size:14px}.video .play span{width:44px;height:44px}}
+.video-pie{text-align:center;color:var(--suave);font-size:15px;margin:14px 0 0}
 .final{text-align:center;padding:48px 0 16px;border-top:1px solid var(--linea)}
 .final img{width:84px;height:84px;border-radius:20px}
 .final h2{font-size:28px;margin:12px 0 6px;color:var(--texto)}
@@ -122,6 +133,16 @@ grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 20px}
 </section>
 
 <section class="seccion">
+<h2>Míralo en un minuto</h2>
+<p class="sub">Así funciona Repicasa, con la app de verdad.</p>
+<a class="video" href="https://youtu.be/t1Vwqh0g0Ww" target="_blank" rel="noopener" aria-label="Ver el vídeo de presentación de Repicasa en YouTube">
+<img src="img/video-portada.jpg" alt="Vídeo de presentación de Repicasa" loading="lazy">
+<span class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>Ver vídeo · 0:36</span>
+</a>
+<p class="video-pie">Se abre en YouTube · <a href="https://youtu.be/9sbACb6h6QU" target="_blank" rel="noopener">Tutorial completo en 2 minutos</a></p>
+</section>
+
+<section class="seccion">
 <h2>Todo lo de tu casa, en una app</h2>
 <p class="sub">Tareas, aparatos, contratos y contactos de profesionales, con sus avisos.</p>
 <div class="funciones"><div class="func"><div class="icono" style="background:#DDEBEE;color:#1F4A55"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><b>Tareas para tu casa</b><p>Unas preguntas sobre tu vivienda y la app elige qué revisar, cada cuánto y en qué época, según tu comunidad autónoma y el clima.</p></div><div class="func"><div class="icono" style="background:#F6E1DD;color:#B0473A"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></div><b>Avisos a tiempo</b><p>Hoy toca, mañana, en 3 días… y la víspera de una cita con el técnico, con su hora. Sin agobiar: como mucho un aviso al día.</p></div><div class="func"><div class="icono" style="background:#F6EBCF;color:#8A6516"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg></div><b>Tus propias tareas</b><p>Regar las plantas, la pastilla del gato o llamar al pintor: cada semana, cada mes, siempre el mismo día o una sola vez.</p></div><div class="func"><div class="icono" style="background:#E9E3F3;color:#5E4B8B"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6h2"/></svg></div><b>Aparatos y garantías</b><p>Guarda la fecha de compra y el ticket de cada aparato. Te avisamos antes de que acabe la garantía.</p></div><div class="func"><div class="icono" style="background:#E1ECE3;color:#4D6B55"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></div><b>Suministros y contratos</b><p>Luz, gas, internet, seguro del hogar… con sus documentos. Te avisamos antes de que acabe la permanencia y guarda los contratos anteriores.</p></div><div class="func"><div class="icono" style="background:#DDEEEC;color:#2E6F69"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div><b>Calendario e historial</b><p>Todo el año de un vistazo y lo que has hecho, mes a mes. Descarga el informe de tu casa en PDF o Excel.</p></div><div class="func"><div class="icono" style="background:#DDEBEE;color:#1F4A55"><svg viewBox="0 0 24 24"><path d="M2 12l6-5 6 5"/><path d="M4 11v8h8v-8"/><path d="M14 9l4-3 4 3v10h-6"/></svg></div><b>Varias casas</b><p>Tu piso, la casa del pueblo o la de tus padres, cada una con sus tareas y sus avisos.</p></div><div class="func"><div class="icono" style="background:#DDEEEC;color:#2E6F69"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 2A3 3 0 0 0 7 18z"/><path d="M12 11v5M10 14l2 2 2-2"/></svg></div><b>Copia automática</b><p>Cada semana o cada mes, a la hora que elijas, en tu móvil o en tu Google Drive. Sin hacer nada.</p></div><div class="func"><div class="icono" style="background:#F6EBCF;color:#8A6516"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="16" height="7" rx="2"/></svg></div><b>Widget</b><p>Lo próximo que toca, en la pantalla de inicio del móvil.</p></div></div>
@@ -146,9 +167,9 @@ grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 20px}
 <h2 class="nombre">Repi<i>casa</i></h2>
 <p class="sello">Mantenimiento del hogar, adaptado a España.</p>
 <p><span class="aviso">Próximamente en Google Play</span></p>
-<p class="sello">¿Dudas o ideas? <a href="mailto:contacto@repicasa.es">contacto@repicasa.es</a></p>
+<p class="sello">¿Dudas o ideas? <a href="mailto:contacto@repicasa.es">contacto@repicasa.es</a> · Síguenos en <a href="https://www.youtube.com/@Repicasa" target="_blank" rel="noopener">YouTube</a></p>
 </section>
 </main>
-<footer><div>Repicasa · Sin anuncios · Tus datos no pasan por nosotros · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a href="quien-soy.html">Quién soy</a></div></footer>
+<footer><div>Repicasa · Sin anuncios · Tus datos no pasan por nosotros · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a href="quien-soy.html">Quién soy</a> · <a href="https://www.youtube.com/@Repicasa" target="_blank" rel="noopener">YouTube</a></div></footer>
 </body>
 </html>

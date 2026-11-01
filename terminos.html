@@ -86,6 +86,17 @@ grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 20px}
 .privada li:first-child{border-top:0}
 .privada li:before{content:"✓";position:absolute;left:0;color:#E3B341;font-weight:700}
 .nota{font-size:14px;color:var(--suave);max-width:720px}
+.video{display:block;position:relative;max-width:760px;margin:0 auto;border-radius:22px;overflow:hidden;
+box-shadow:0 24px 60px rgba(31,74,85,.22)}
+.video img{display:block;width:100%;height:auto}
+.video .play{position:absolute;left:7%;bottom:9%;display:flex;align-items:center;gap:12px;
+color:#F7F1E6;font-weight:600;font-size:16px;text-decoration:none}
+.video .play span{width:56px;height:56px;border-radius:50%;background:#F7F1E6;display:flex;
+align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .15s}
+.video:hover .play span{transform:scale(1.08)}
+.video .play svg{width:24px;height:24px;fill:#1F4A55;margin-left:4px}
+@media (max-width:520px){.video .play{font-size:14px}.video .play span{width:44px;height:44px}}
+.video-pie{text-align:center;color:var(--suave);font-size:15px;margin:14px 0 0}
 .final{text-align:center;padding:48px 0 16px;border-top:1px solid var(--linea)}
 .final img{width:84px;height:84px;border-radius:20px}
 .final h2{font-size:28px;margin:12px 0 6px;color:var(--texto)}
@@ -130,6 +141,6 @@ grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 20px}
 <p>Sergio Díaz González · <a href="mailto:contacto@repicasa.es">contacto@repicasa.es</a>. Más datos en «Quién soy».</p>
 <p>Se aplica la ley española. Si eres consumidor, puedes acudir a los juzgados de tu domicilio.</p>
 </main>
-<footer><div>Repicasa · Sin anuncios · Tus datos no pasan por nosotros · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a href="quien-soy.html">Quién soy</a></div></footer>
+<footer><div>Repicasa · Sin anuncios · Tus datos no pasan por nosotros · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a href="quien-soy.html">Quién soy</a> · <a href="https://www.youtube.com/@Repicasa" target="_blank" rel="noopener">YouTube</a></div></footer>
 </body>
 </html>
